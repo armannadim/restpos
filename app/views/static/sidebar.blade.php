@@ -1,0 +1,118 @@
+<!-- BEGIN SIDEBAR -->
+<div class="page-sidebar" id="main-menu">
+    <!-- BEGIN MINI-PROFILE -->
+    <div class="user-info-wrapper">
+        <div class="profile-wrapper">
+            <img src="{{asset('img/profiles/avatar.jpg')}}" data-src="{{asset('img/profiles/avatar.jpg')}}" data-src-retina="{{asset('img/profiles/avatar2x.jpg')}}" width="69" height="69" />
+        </div>
+        <div class="user-info">
+            <div class="greeting">Welcome</div>
+            <div class="username">{{Auth::user()->firstname}} <span class="semi-bold">{{Auth::user()->lastname}}</span></div>
+            <div class="status">Status<a href="#"><div class="status-icon green"></div>Online</a></div>
+        </div>
+    </div>
+    <!-- END MINI-PROFILE -->
+
+    <!-- BEGIN MINI-WIGETS -->
+
+    <!-- END MINI-WIGETS -->
+
+    <!-- BEGIN SIDEBAR MENU -->
+    <p class="menu-title">BROWSE <span class="pull-right"><a href="javascript:;"><i class="icon-refresh"></i></a></span></p>
+    <ul>
+        <li class="start {{Route::getCurrentRoute()->getPath()=='dashboard'?'active':''}} "> <a href="{{ URL::to('/') }}"> <i class="icon-custom-home"></i> <span class="title">Dashboard</span> <span class="selected"></span> <span class="badge badge-important pull-right">5</span></a> </li>
+        <!--<li class=""> <a href="{{ URL::to('email') }}"> <i class="icon-envelope"></i> <span class="title">Email</span>  <span class=" badge badge-disable pull-right ">203</span></a> </li>-->
+        <li class="{{Route::getCurrentRoute()->getPath()=='configuration'?'active':''}}"> <a href="{{ URL::to('configuration') }}"> <i class="icon-custom-ui"></i> <span class="title">Site Settings</span> <span class="arrow "></span> </a>
+        </li>
+        <li class="{{Request::is('data/*')?'active':''}}"> <a href="{{ URL::to('rest_management') }}"> <i class="icon-custom-form"></i> <span class="title">Restaurant Settings</span> <span class="arrow "></span> </a>
+            <ul class="sub-menu">                
+                <li> <a href="{{ URL::to('data/items') }}"> Items </a> </li>
+                <li> <a href="{{ URL::to('data/configuration') }}"> Other config </a> </li> 
+                <li> <a href="{{ URL::to('data/clients') }}"> Clients </a> </li> 
+            </ul>
+        </li>
+        <li class="{{Route::getCurrentRoute()->getPath()=='statistics'?'active':''}}"> <a href="{{ URL::to('statistics') }}"> <i class="icon-custom-portlets"></i> <span class="title">Statistics</span> <span class="arrow "></span> </a>
+            <ul class="sub-menu">
+                <li> <a href="{{ URL::to('statistics/invoice') }}">Invoices</a> </li>
+                <li> <a href="{{ URL::to('statistics/sales') }}">Sales </a> </li>
+            </ul>
+        </li>
+        <li class="{{Request::is('user_management/*')?'active':''}}"> <a href="{{ URL::to('user_management') }}"> <i class="icon-custom-thumb"></i> <span class="title">User management</span> <span class="arrow "></span> </a>
+            <ul class="sub-menu">
+                <li> <a href="{{ URL::to('user_management/new_user') }}"> New User </a> </li>
+                <li> <a href="{{ URL::to('user_management/list_user') }}"> User list </a> </li>
+            </ul>
+        </li>
+        <!--<li class=""> <a href="javascript:;"> <i class="icon-custom-map"></i> <span class="title">Maps</span> <span class="arrow "></span> </a>
+            <ul class="sub-menu">
+                <li> <a href="google_map.html"> Google Maps </a> </li>
+                <li> <a href="vector_map.html"> Vector Maps </a> </li>
+            </ul>
+        </li>
+        <li class=""> <a href="charts.html"> <i class="icon-custom-chart"></i> <span class="title">Charts</span> </a> </li>
+        <li class=""> <a href="javascript:;"> <i class="icon-custom-extra"></i> <span class="title">Extra</span> <span class="arrow "></span> </a>
+            <ul class="sub-menu">
+                <li> <a href="user-profile.html"> User Profile </a> </li>
+                <li> <a href="gallery.html"> Gallery</a> </li>
+                <li class=""><a href="calender.html"> Calendar</a> </li>
+                <li> <a href="search_results.html"> Search Results </a> </li>
+                <li> <a href="invoice.html"> Invoice </a> </li>
+                <li> <a href="404.html"> 404 Page </a> </li>
+                <li> <a href="500.html"> 500 Page </a> </li>
+                <li> <a href="blank_template.html"> Blank Page </a> </li>
+            </ul>
+        </li>
+        <li class="hidden-desktop hidden-phone visible-tablet" id="more-widgets" style="display:"> <a href="javascript:;"> <i class="icon-ellipsis-horizontal"></i></a>
+            <ul class="sub-menu">
+                <div class="side-bar-widgets">
+                    <p class="menu-title">FOLDER <span class="pull-right"><a href="#" class="create-folder"><i class="icon-plus"></i></a></span></p>
+                    <ul class="folders" id="folders">
+                        <li><a href="#"><div class="status-icon green"></div> My quick tasks </a> </li>
+                        <li><a href="#"><div class="status-icon red"></div> To do list </a> </li>
+                        <li><a href="#"><div class="status-icon blue"></div> Projects </a> </li>
+                        <li id="folder-input" class="folder-input" style="display:none"><input type="text" placeholder="Name of folder" class="no-boarder folder-name" name="" id="folder-name" /></li>
+                    </ul>
+                    <p class="menu-title">PROJECTS </p>
+                    <div class="status-widget">
+                        <div class="status-widget-wrapper">
+                            <div class="title">Freelancer<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+                            <p>Redesign home page</p>
+                        </div>
+                    </div>
+                    <div class="status-widget">
+                        <div class="status-widget-wrapper">
+                            <div class="title">envato<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+                            <p>Statistical report</p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </li>-->
+    </ul>
+    <!--<div class="side-bar-widgets">
+        <p class="menu-title">FOLDER <span class="pull-right"><a href="#" class="create-folder"><i class="icon-plus"></i></a></span></p>
+        <ul class="folders" id="folders">
+            <li><a href="#"><div class="status-icon green"></div> My quick tasks </a> </li>
+            <li><a href="#"><div class="status-icon red"></div> To do list </a> </li>
+            <li><a href="#"><div class="status-icon blue"></div> Projects </a> </li>
+            <li id="folder-input" class="folder-input" style="display:none"><input type="text" placeholder="Name of folder" class="no-boarder folder-name" name="" id="folder-name" /></li>
+        </ul>
+        <p class="menu-title">PROJECTS </p>
+        <div class="status-widget">
+            <div class="status-widget-wrapper">
+                <div class="title">Freelancer<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+                <p>Redesign home page</p>
+            </div>
+        </div>
+        <div class="status-widget">
+            <div class="status-widget-wrapper">
+                <div class="title">envato<a href="#" class="remove-widget"><i class="icon-custom-cross"></i></a></div>
+                <p>Statistical report</p>
+            </div>
+        </div>
+    </div>-->
+
+    <a href="#" class="scrollup">Scroll</a>
+    <div class="clearfix"></div>
+    <!-- END SIDEBAR MENU -->
+</div>

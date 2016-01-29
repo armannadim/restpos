@@ -1,0 +1,111 @@
+
+
+
+
+
+<!-- BEGIN CORE JS FRAMEWORK-->
+<?php echo HTML::script('plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js');; ?>
+
+<?php echo HTML::script('plugins/jquery-1.8.3.min.js');; ?>
+
+<?php echo HTML::script('plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js');; ?>
+
+<?php echo HTML::script('plugins/bootstrap/js/bootstrap.min.js');; ?>
+
+<?php echo HTML::script('plugins/breakpoints.js');; ?>
+
+<?php echo HTML::script('plugins/jquery-unveil/jquery.unveil.min.js');; ?>
+
+<!-- DATATABLES -->
+<?php echo HTML::script('js/datatables/jquery.datatables.min.js');; ?>
+
+<?php echo HTML::script('js/datatables/jquery.jeditable.js');; ?>
+
+<?php echo HTML::script('js/datatables/jquery.dataTables.editable.js');; ?>
+
+<?php echo HTML::script('js/datatables/dataTables.tableTools.js');; ?>
+
+<?php echo HTML::script('js/datatables/jquery.validate.js');; ?>
+
+<!-- END CORE JS FRAMEWORK -->
+
+<!--[if lt IE 9]>
+<?php echo HTML::script('plugins/excanvas.js');; ?>
+
+<?php echo HTML::script('plugins/respond.js');; ?>
+
+<![endif]-->
+
+<!-- BEGIN PAGE LEVEL JS -->
+ <?php echo HTML::script('plugins/pace/pace.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-slimscroll/jquery.slimscroll.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-numberAnimate/jquery.animateNumbers.js');; ?>
+
+ <?php echo HTML::script('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-slimscroll/jquery.slimscroll.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-block-ui/jqueryblockui.js');; ?>
+
+ <?php echo HTML::script('plugins/bootstrap-select2/select2.min.js');; ?>
+
+ 
+ 
+ <?php echo HTML::script('plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js');; ?>
+
+
+ <?php if(Route::getCurrentRoute()->getPath()=='dashboard'): ?> 
+ <?php echo HTML::script('plugins/jquery-ricksaw-chart/js/raphael-min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-ricksaw-chart/js/d3.v2.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-ricksaw-chart/js/rickshaw.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-morris-chart/js/morris.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-easy-pie-chart/js/jquery.easypiechart.min.js');; ?>
+
+<?php endif; ?>
+
+ <?php echo HTML::script('plugins/jquery-slider/jquery.sidr.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-jvectormap/js/jquery-jvectormap-1.2.2.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-jvectormap/js/jquery-jvectormap-us-lcc-en.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-sparkline/jquery-sparkline.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-flot/jquery.flot.min.js');; ?>
+
+ <?php echo HTML::script('plugins/jquery-flot/jquery.flot.animator.min.js');; ?>
+
+ <?php echo HTML::script('plugins/skycons/skycons.js');; ?>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45776281-1', 'revox.io');
+  ga('send', 'pageview');
+
+</script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- PAGE JS -->
+<?php if(Route::getCurrentRoute()->getPath()=='dashboard'): ?>
+<?php echo HTML::script('js/dashboard.js');; ?>
+
+<?php endif; ?>
+
+<!-- BEGIN CORE TEMPLATE JS -->
+<?php echo HTML::script('js/core.js');; ?>
+
+<?php echo HTML::script('js/custom_scripts.js');; ?>
+
+<!--<?php echo HTML::script('js/demo.js');; ?>-->
+<!-- END CORE TEMPLATE JS -->
+<?php echo HTML::script('js/tabs_accordian.js');; ?>
+

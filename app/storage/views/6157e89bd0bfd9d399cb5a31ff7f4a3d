@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+This project has been created by Aseq A Arman Nadim.
+Anyone can use this project and its contents but with permission of the author of this project.
+Email: armannadim@msn.com
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <?php echo $__env->make('static.meta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <title></title>
+    </head>
+
+    <body class=" breakpoint-1024 pace-done">
+    <div class="page-container row-fluid">
+        <?php echo $__env->make('static.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        
+
+
+
+        <?php echo $__env->yieldContent('content'); ?>
+
+
+    <?php echo $__env->make('static.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('static.meta_foot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Login</title>
+        <meta name="generator" content="Bootply" />
+        <?php echo $__env->make('static.meta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        
+        <!--[if lt IE 9]>
+                <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+        <!--login modal-->
+        <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                        <h1 class="text-center">Login</h1>
+                    </div>
+                    <div class="modal-body">
+
+                        <p>Login Form.</p>
+                        <?php echo Form::open(array('url' => '/login', 'method'=>'get', 'class' =>'form col-md-12 center-block')); ?>
+
+                        <!-- if there are login errors, show them here -->
+                        <div>
+                            <?php echo $errors->first('username'); ?>
+
+                            <?php echo $errors->first('password'); ?>
+
+                        </div>
+
+                        <!--<div>
+                            <?php echo Form::label('username', 'Username'); ?>-->
+                        <div class="form-group">
+                            <?php echo Form::text('username','', ['class'=>'form-control input-lg', 'placeholder'=>'Username']); ?>
+
+                        </div>
+                        <!--<div>
+
+                            <?php echo Form::label('password', 'Password'); ?>-->
+                        <div class="form-group">
+                            <?php echo Form::password('password','', ['class'=>'form-control input-lg', 'placeholder'=>'Password']); ?>
+
+                        </div>
+                        <!--<div>
+                            <?php echo Form::label('lblRememberme', 'Recordar contraseña'); ?>-->
+                        <div class="form-group">
+                            <?php echo Form::checkbox('rememberme', true); ?>
+
+                        </div>
+                        <div class="form-group">
+                            <?php echo Form::submit('Login', ['class' => 'btn btn-primary btn-lg btn-block']); ?>
+
+                        </div>
+                        <?php echo Form::close(); ?>
+
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                           <!-- <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>-->
+                        </div>	
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- script references -->
+        
+    </body>
+</html>
